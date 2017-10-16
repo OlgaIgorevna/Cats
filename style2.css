@@ -33,20 +33,14 @@ body {
 }
 .card {
     box-sizing: border-box;
-   /* width: 100%;    
-    max-width: 400px;
-    max-height: 450px;
-    padding-bottom: 120%;
-    */
     width: 300;
     height: 450;
-    background-color: white;
-    border: 5px solid #0fb0ff;
+    background-color: white;   
     border-radius: 10px;    
     margin: 5px auto;    
     background: url(img/cat.png) no-repeat, #ffffff;
     background-position: -50px 180px;   
-   
+    position:relative;   
 }
 .text-block {
     text-align: left;
@@ -54,7 +48,59 @@ body {
     font-family:  "Tahoma", sans-serif;
     font-size: 14px; 
 }
+.circle {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 1px;
+    width: 80px;
+    height: 80px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+}
 
+.first-card{
+     border: 5px solid #0fb0ff;
+}
+.first-card .circle{
+   background: #0fb0ff;
+}
+.second-card{
+    border: 5px solid #FFD700;
+    opacity: 0.3;
+    z-index: 2;
+}
+
+.second-card .circle{
+   background: #FFD700;
+}
+.third-card{
+     border: 5px solid #DC143C;
+}
+.third-card .circle{
+     background: #DC143C;
+}
+.shadow{
+    position: absolute;
+    left: 528px;
+    background-image: none;
+    background-color:white;
+    z-index: 1;
+}
+
+
+.circle-text{
+    margin: 10px; /* почему margin: auto 0; не выравнивает по вертикали?? */
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family:sans-serif;   
+    line-height: 1;
+}
+.small-text{
+    font-size: 20px;
+}
 .clearfix::after {
     content: "";
     display: table;
