@@ -2,6 +2,39 @@
   margin: 0;
   padding: 0;
 }
+/*.triangle{	border: 20px solid transparent;	border-left: 20px solid yellow; border-top: 20px solid green; width:0; height:0} */
+/* .block {
+    width: 50px;
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+   }
+   .block::before, .block::after {
+    content: ''; 
+    position: absolute;
+    left: 20px; bottom: -20px;
+    border: 10px solid transparent;
+    /*border-top: 10px solid green;*/
+   /*    border-left: 10px solid yellow;
+       border-top: 10px solid green;
+   }
+   .block::after {
+    border-top: 10px solid white;
+    bottom: -19px; 
+   } /*делает треугольник белым, а не зеленым*/
+.block{
+    width: 45px;
+    height: 45px;
+    background: yellow;
+ -webkit-transform: rotate(45deg);
+    position: absolute;
+    top: -21px;
+    left: -23px;
+    z-index: 4;
+    border-right: 5px solid #0fb0ff;
+     background-image:  url(img/bg.png);
+}
 @font-face {
     font-family: Exo; /* Имя шрифта */
     src: url(fonts/Exo2.0-Thin.otf)  format("opentype");
@@ -36,6 +69,7 @@ body {
     margin: 5px auto;
     display: inline-block;
     vertical-align: top;
+    position: relative;
     
 }
 .card-caption{
