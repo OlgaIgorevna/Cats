@@ -1,42 +1,26 @@
 * {
   margin: 0;
   padding: 0;
+ 
 }
-/*.triangle{	border: 20px solid transparent;	border-left: 20px solid yellow; border-top: 20px solid green; width:0; height:0} */
-/* .block {
-    width: 50px;
-    border: 1px solid green;
-    border-radius: 10px;
-    padding: 20px;
-    position: relative;
-   }
-   .block::before, .block::after {
-    content: ''; 
-    position: absolute;
-    left: 20px; bottom: -20px;
-    border: 10px solid transparent;
-    /*border-top: 10px solid green;*/
-   /*    border-left: 10px solid yellow;
-       border-top: 10px solid green;
-   }
-   .block::after {
-    border-top: 10px solid white;
-    bottom: -19px; 
-   } /*делает треугольник белым, а не зеленым*/
-.block{
-    width: 45px;
-    height: 45px;    
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg); /* Для Firefox */
-    -ms-transform: rotate(45deg); /* Для IE */    
-    -o-transform: rotate(45deg); /* Для Opera */
-    position: absolute;
-    top: -21px;
-    left: -23px;
-    z-index: 4;
-    border-right: 5px solid #0fb0ff;
-    background-image:  url(img/bg.png);
-}
+
+/*
+.trapezium {
+    display: block;
+    position:absolute;
+    left:-10px;
+    top:-30px;
+    height: 0;
+    width: 25px;
+    z-index: 5;
+    border-bottom: 5px solid #ec3504;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(-45deg); 
+    -ms-transform: rotate(-45deg);    
+    -o-transform: rotate(-45deg); 
+} */
 @font-face {
     font-family: Exo; /* Имя шрифта */
     src: url(fonts/Exo2.0-Thin.otf)  format("opentype");
@@ -71,8 +55,7 @@ body {
     margin: 5px auto;
     display: inline-block;
     vertical-align: top;
-    position: relative;
-    
+    position: relative;    
 }
 .card-caption{
     color: white;
@@ -86,27 +69,28 @@ body {
     border-bottom: 1px dashed #0fb0ff;
 }
 .container-card:nth-child(2) .card-caption span{
-    color:#FFD700;
-    
+    color:#FFD700;    
 }
+
 .card {
     box-sizing: border-box;
     width: 300px;
     height: 450px;
     background-color: white;   
     border-radius: 10px;    
- /*   margin: 5px auto;    */   
+    /* margin: 5px auto; */   
     background: url(img/cat.png) no-repeat, #ffffff;
     background-position: -50px 180px;   
-    position:relative;   
-    
+    position:relative;      
 }
+
 .text-block {
     text-align: left;
     margin: 15px 0 0 30px;
     font-family:  "Tahoma", sans-serif;
     font-size: 14px; 
 }
+
 .circle {
     position: absolute;
     bottom: 10px;
@@ -123,8 +107,23 @@ body {
 .first-card{
      border: 5px solid #0fb0ff;
 }
+
 .first-card .circle{
    background: #0fb0ff;
+}
+.block{
+    width: 45px;
+    height: 45px;    
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg); /* Для Firefox */
+    -ms-transform: rotate(45deg); /* Для IE */    
+    -o-transform: rotate(45deg); /* Для Opera */
+    position: absolute;
+    top: -21px;
+    left: -23px;
+    z-index: 4;
+    border-right: 5px solid #0fb0ff;
+    background-image:  url(img/bg.png);
 }
 .second-card{
     border: 5px solid darkgray;
@@ -147,11 +146,62 @@ body {
 }
 
 .third-card{
-     border: 5px solid #DC143C;
+    border: 5px solid #DC143C;
+    border-top: none;
+    height: 400px;
+    border-radius: 0 0 10px 10px; 
+    position: relative;
+   
+}
+.third-card .text-block{
+    margin-top: 0;
+    padding-left: 15px;
 }
 .third-card .circle{
      background: #DC143C;
 }
+
+.third-card .text-block .name{
+    margin-top: 0;
+}
+.head{
+    box-sizing: border-box;
+    position: relative;    
+    width: 250px;
+    height: 50px;
+    left: 50px;
+    background: white;
+    border: 5px solid #DC143C;
+    border-bottom: none;
+    border-left:none;
+    border-radius: 0 10px 0 0;
+    
+}
+.head::before{
+    border-bottom: 50px solid #DC143C; 
+	border-left: 50px solid transparent;    
+    content: "";
+    display: block;
+    position: absolute;
+    left:-50px;
+    top:-5px;
+    z-index: 5;    
+}
+.head:after{
+    border-bottom: 45.5px solid white; 
+	border-left: 45.5px solid transparent;    
+    content: "";
+    display: block;
+    position: absolute;
+    left:-45.1px;
+    top:-0.3px;
+    z-index: 6; 
+    
+}
+.head .text-block{
+    margin-left:0;
+}
+
 
 .circle-text{
     margin: 10px; /* почему margin: auto 0; не выравнивает по вертикали?? */
