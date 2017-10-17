@@ -20,7 +20,7 @@ h2 {
 .number {
     font-weight: bold; 
 }
-.title {
+.name {
     margin: 10px 0;
     line-height: 1.2;
     
@@ -29,7 +29,29 @@ body {
     background-image:  url(img/bg.png);  
 }
 .layout-positioner {       
-    margin: 0 auto;   
+    margin: 0 auto; 
+    text-align: center;
+}
+.container-card{
+    margin: 5px auto;
+    display: inline-block;
+    vertical-align: top;
+    
+}
+.card-caption{
+    color: white;
+    font-family: sans-serif;
+    padding: 5px; 
+    font-size: 13px;
+    font-weight: 700;
+}
+.container-card:nth-child(1) .card-caption span{
+    color:#0fb0ff;
+    border-bottom: 1px dashed #0fb0ff;
+}
+.container-card:nth-child(2) .card-caption span{
+    color:#FFD700;
+    
 }
 .card {
     box-sizing: border-box;
@@ -37,11 +59,11 @@ body {
     height: 450px;
     background-color: white;   
     border-radius: 10px;    
-    margin: 5px auto;    
+ /*   margin: 5px auto;    */   
     background: url(img/cat.png) no-repeat, #ffffff;
     background-position: -50px 180px;   
     position:relative;   
-    vertical-align: top;
+    
 }
 .text-block {
     text-align: left;
@@ -59,6 +81,7 @@ body {
     -moz-border-radius: 40px;
     -webkit-border-radius: 40px;
     border-radius: 40px;
+    text-align:center;
 }
 
 .first-card{
@@ -68,12 +91,12 @@ body {
    background: #0fb0ff;
 }
 .second-card{
-    border: 5px solid #FFD700;
+    border: 5px solid darkgray;
     z-index: 2;    
 }
 
 .second-card .circle{
-   background: #FFD700;
+   background: darkgray;
 }
 .second-card:before{
     content: "";
@@ -83,7 +106,8 @@ body {
     height:100%;
     left:0;
     top:0;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 10px;
 }
 
 .third-card{
@@ -91,13 +115,6 @@ body {
 }
 .third-card .circle{
      background: #DC143C;
-}
-.shadow{
-    position: absolute;
-    left: 528px;
-    background-image: none;
-    background-color:white;
-    z-index: 1;
 }
 
 .circle-text{
@@ -116,21 +133,46 @@ body {
     display: table;
     clear: both;
 }
+/*
+.title{
+    width:100%;
+    padding:5px;
+    min-height: 30px;
+}
+.title span{
+    display: block;
+    font-family: Exo;
+    color: white;
+    font-size: 40px;
+    width: 35%;
+    margin: 0 auto;
+}
+*/
+.title{
+    width:100%;
+    padding: 10px 0;
+    text-align: center;
+}
+.title span{
+    font-family: Exo;
+    color: white;
+    font-size: 35px;
+    line-height: 1;
+}
 
 @media (min-width: 768px) {
     
-    .card {
-        display: inline-block;                       
+    .container-card {                             
         margin: 20px 20px;
     }
-    .layout-positioner {       
-        text-align: center;
-    }   
+     
 }
 
 @media (min-width: 1440px) {
-    
-    .card {                           
+    .title{
+        padding-top: 100px;
+    }
+    .container-card {                           
         margin: 20px 20px 20px 0;
     }
 }
