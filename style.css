@@ -25,15 +25,17 @@
    } /*делает треугольник белым, а не зеленым*/
 .block{
     width: 45px;
-    height: 45px;
-    background: yellow;
- -webkit-transform: rotate(45deg);
+    height: 45px;    
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg); /* Для Firefox */
+    -ms-transform: rotate(45deg); /* Для IE */    
+    -o-transform: rotate(45deg); /* Для Opera */
     position: absolute;
     top: -21px;
     left: -23px;
     z-index: 4;
     border-right: 5px solid #0fb0ff;
-     background-image:  url(img/bg.png);
+    background-image:  url(img/bg.png);
 }
 @font-face {
     font-family: Exo; /* Имя шрифта */
